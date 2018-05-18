@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+
+    <style type="text/css">
+    #main{
+      border:1px solid red;
+    }
+
+
+
+    </style>
+  </head>
+  <body>
+    <canvas id="main" width="400" height="300">
+    </canvas>
+    <script src="index.js"></script>
+
+    <script type="text/javascript">
+    var context = document.getElementById("main").getContext("2d");
+      //draw rectangle
+      context.fillRect(30,30,150,80);
+    context.rect(20,20,50,50);
+context.strokeStyle="#FF00FF";
+context.lineWidth = 10;
+
+context.stroke();
+//draw line
+context.beginPath();
+context.arc(90,90,40,0,2*Math.PI);
+
+context.moveTo(80,80);
+context.lineTo(250,300);
+context.stroke();
+
+
+    </script>
+  </body>
+  </html>
